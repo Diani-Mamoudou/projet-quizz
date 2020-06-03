@@ -1,0 +1,24 @@
+
+.custom-checkbox.custom-control-input:checked~.custom-control-label::before {
+    background-color: #51bfd0;
+    border: none;
+  }
+.bg-colorA{
+    background-color: #51bfd0;
+}
+.bg-colorA-opac15{
+    background-color: #51bfd0;
+    opacity: 15%;
+}
+.bg-colorB{
+    background-color: #042425;
+}
+.bg-colorC{
+    background-color: #3addd6;
+}
+.bg-colorD{
+    background-color: #f2f2f2;
+}
+.bg-gradent{
+    background-image: linear-gradient(to top, #51bfd0, white);
+}
