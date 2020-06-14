@@ -2,7 +2,7 @@
     abstract class Manager{
 
         private $pdo=null;
-        protected $classeName;
+        protected $className;
 
         
         private function getConnexion(){
@@ -57,5 +57,3 @@
 
 
     }
-
-?>

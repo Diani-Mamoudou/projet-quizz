@@ -1,7 +1,29 @@
+<?php
 
+
+
+function liste()
+{
+  foreach ($_SESSION['joueur'] as $key => $value) {
+    $fname = explode(" ", $value->getFullName())
+?>
+    <tr>
+      <td><?= $fname[0] ?> </td>
+      <td><?= $fname[0] ?> </td>
+      <td><?= $value->getScore() ?> pts</td>
+    </tr>
+
+<?php
+  }
+}
+?>
 
 <div class="container w-100 h-100 bg-white rounded" style="margin-right=1%;margin-left:10px">
   <h4 class="text-center font-family: 'Open Sans', sans-serif">LISTE DES JOUEUR PAR SCORE</h4>
+
+
+
+
 
   <div class="contain_sub " style="border:solid 2px #48d1cc;border-radius: 10px; height: 539px;">
     <table class="table table-borderless" style="margin-left:10px">
@@ -13,33 +35,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Diani</td>
-          <td>Mamoudou S</td>
-          <td>285 pts</td>
-        </tr>
-        <tr>
-          <td>Fall</td>
-          <td>Anges</td>
-          <td>195 pts</td>
-        </tr>
-        <tr>
-          <td>Diop</td>
-          <td>Phinees</td>
-          <td>185 pts</td>
-        </tr>
-        <tr>
-          <td>Mapali</td>
-          <td>Yvan la Bibi</td>
-          <td>165 pts</td>
-        </tr>
-        <tr>
-          <td>Gomes</td>
-          <td>Christian</td>
-          <td>05 pts</td>
-        </tr>
+
+
+        <?php liste(); ?>
+
       </tbody>
     </table>
   </div>
 </div>
-

@@ -3,4 +3,3 @@
 
         public function hydrate(array $row);
     }
-?>

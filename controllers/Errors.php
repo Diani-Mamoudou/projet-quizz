@@ -1,8 +1,9 @@
 <?php
-class Errors extends Controller{
+class Errors extends Controller
+{
 
-    public function showError($smsError){
-           die($smsError);
+    public function showError($smsError)
+    {
+        die($smsError);
     }
-
 }
