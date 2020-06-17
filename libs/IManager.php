@@ -1,5 +1,6 @@
 <?php
-    interface Imanager{
+interface Imanager
+{
 
-        public function hydrate(array $row);
-    }
+    public function hydrate(array $row);
+}

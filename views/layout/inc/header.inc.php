@@ -19,7 +19,7 @@
     </div>
     <div class="container-fluid w-100 p-2 bg-colorB" style="z-index:1030;">
       <h1 class="text-center text-white w-100 p-2">
-    
-      Le plaisir de jouer
+
+        Le plaisir de jouer
       </h1>
     </div>

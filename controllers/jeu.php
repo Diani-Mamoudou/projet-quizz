@@ -17,13 +17,13 @@ class admin extends Controller
     $this->render();
   }
 
-  public function listeJoueurs()
+  public function listeQuestion()
   {
     $this->manager = new userManager();
-    $joueur = $this->manager->ListeJoueur();
-    $this->data['joueur'] = $joueur;
-    $_SESSION['joueur'] = $this->data['joueur'];
-    $this->views = "listeJoueurs";
+    $question = $this->manager->ListeJoueur();
+    $this->data['question'] = $question;
+    $_SESSION['question'] = $this->data['question'];
+    $this->views = "jeu";
     $this->render();
   }
 }

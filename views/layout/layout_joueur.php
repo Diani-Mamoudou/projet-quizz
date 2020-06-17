@@ -13,7 +13,7 @@
         </div>
 
         <div class="col-3">
-            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn bg-colorC float-right border-top rounded text-white shadow" style="text-shadow:1px 1px 2px black;"><a href="<?= WEBROOT ?>security/seDeconnecter" class="text-decoration-none text-white">Deconnexion</a></button>
+            <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn bg-colorC float-right border-top rounded text-white shadow" style="text-shadow:1px 1px 2px black;"><a class="text-decoration-none text-white">Deconnexion</a></button>
         </div>
     </div>
 
@@ -23,25 +23,28 @@
     </div>
 
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Déja?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Voulez-vous vraiment vous déconnecter ?
-                </div>
-                <form action="<?= WEBROOT ?>security/seDeconnecter" method="post">
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Non</button>
-                        <button type="submit" name="btn_logout" class="btn btn-success">Oui</button>
-                    </div>
-                </form>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Déja?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                Voulez-vous vraiment vous déconnecter ?
+            </div>
+            <form action="<?= WEBROOT ?>security/seDeconnecter" method="post">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Non</button>
+                    <button type="submit" name="btn_logout" class="btn btn-success">Oui</button>
+                </div>
+            </form>
         </div>
     </div>
-    <?php require_once("./views/layout/inc/footer.inc.php") ?>
+</div>
+
+<?php require_once("./views/layout/inc/footer.inc.php") ?>

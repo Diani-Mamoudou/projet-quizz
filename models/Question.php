@@ -4,6 +4,9 @@ class Question implements IManager
     private $idQuestion;
     private $libelle;
     private $type;
+    private $nbRep;
+    private $reponse;
+    private $point;
 
     public function __construct($row = null)
     {
@@ -14,9 +17,12 @@ class Question implements IManager
 
     public function hydrate($row)
     {
-        $this->id = $row['idQuestion'];
-        $this->fullName = $row['libelle'];
-        $this->login = $row['type'];
+        $this->idQuestion = $row['idQuestion'];
+        $this->libelle = $row['libelle'];
+        $this->type = $row['type'];
+        $this->nbRep = $row['nbRep'];
+        $this->reponse = $row['reponse'];
+        $this->point = $row['point'];
     }
 
     /**
@@ -75,6 +81,66 @@ class Question implements IManager
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of reponse
+     */
+    public function getReponse()
+    {
+        return $this->reponse;
+    }
+
+    /**
+     * Set the value of reponse
+     *
+     * @return  self
+     */
+    public function setReponse($reponse)
+    {
+        $this->reponse = $reponse;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of point
+     */
+    public function getPoint()
+    {
+        return $this->point;
+    }
+
+    /**
+     * Set the value of point
+     *
+     * @return  self
+     */
+    public function setPoint($point)
+    {
+        $this->point = $point;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nbRep
+     */
+    public function getNbRep()
+    {
+        return $this->nbRep;
+    }
+
+    /**
+     * Set the value of nbRep
+     *
+     * @return  self
+     */
+    public function setNbRep($nbRep)
+    {
+        $this->nbRep = $nbRep;
 
         return $this;
     }

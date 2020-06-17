@@ -25,6 +25,7 @@ class UserManager extends Manager
     public function findById($id)
     {
     }
+
     public function loginExist($login)
     {
         $sql = "select * from $this->className where login='$login'";

@@ -8,7 +8,7 @@ function liste()
 ?>
         <tr>
             <td><?= $fname[0] ?> </td>
-            <td><?= $fname[0] ?> </td>
+            <td><?= $fname[1] ?> </td>
             <td><?= $value->getScore() ?> pts</td>
         </tr>
 

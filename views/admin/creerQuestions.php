@@ -5,25 +5,34 @@
 
 
 
-        <form method="post" action="" id="question" class=" rounded p-3" style="border:solid 1px #51bfd0;">
+        <form method="post" action="<?= WEBROOT ?>admin/creerQuestions" id="question" class=" rounded p-3" style="border:solid 1px #51bfd0;">
             <?php
-            if (isset($success[0])) {
+            if (isset($this->data['success'])) {
             ?>
-                <small id="helpId" class="text-danger"><?= $success[0] ?> </small>
+                <small id="helpId" class="text-success"><?= $this->data['success'] ?> </small>
             <?php
             }
             ?>
+
+            <?php
+            if (isset($this->data['err'])) {
+            ?>
+                <small id="helpId" class="text-danger"><?= $this->data['err'] ?> </small>
+            <?php
+            }
+            ?>
+            <small id="idSmall" class="text-danger"><?php if (isset($success[0])) {
+                                                        $success[0];
+                                                    } ?> </small>
             <div class="form-group row">
                 <label for="" class="col-sm-2 text-secondary font-weight-bold col-form-label m-auto" style="font-size:0.9em;"> Questions </label>
                 <div class="col-sm-10">
                     <textarea name="libelleQuestion" id="libelleQuestion" class="form-control rounded-0" style=" height:70px; box-shadow: 1px 1px #51bfd0; background-color:#f5f5f5;" placeholder="" aria-describedby="helpId"></textarea>
-                    <?php
-                    if (isset($erreurs['libelleQuestion'])) {
-                    ?>
-                        <small id="helpId" class="text-danger"><?= $erreurs['libelleQuestion'] ?> </small>
-                    <?php
-                    }
-                    ?>
+                    <small id="helpId" class="text-danger"><?php if (isset($erreurs['libelleQuestion'])) {
+                                                                $erreurs['libelleQuestion'];
+                                                            } ?> </small>
+
+
                 </div>
             </div>
 
@@ -52,7 +61,7 @@
                     <option value="text">Champ de saisie</option>
                 </select>
                 <div class="col-sm-1" id="icAjoutReponse">
-                    <img src=" <?= WEBROOT ?>/assets/image/ic-ajout-réponse.png" style="margin-left:-10px;">
+                    <img src=" <?= WEBROOT ?>assets/image/ic-ajout-réponse.png" style="margin-left:-10px;">
                 </div>
                 <?php
                 if (isset($erreurs['typeReponse'])) {
@@ -60,6 +69,7 @@
                     <small id="helpId" class="text-danger"><?= $erreurs['typeReponse'] ?> </small>
                 <?php
                 }
+                $nbRep = 0;
                 ?>
             </div>
 
@@ -72,7 +82,7 @@
             <div class="row " style="margin-top:100px;">
                 <div class="col-sm-9"> </div>
                 <div class="col-sm-3" style="margin-left:-5px;">
-                    <button type="submit" class="btn btn-primary rounded-0" name="btn_register" onclick="" style="background-color:#51bfd0; border:none;">Enregistrer</button>
+                    <button type="submit" class="btn btn-primary rounded-0" name="btn_register" onclick="validate()" style="background-color:#51bfd0; border:none;">Enregistrer</button>
                     <?php
                     if (isset($createSuccess)) {
                     ?>

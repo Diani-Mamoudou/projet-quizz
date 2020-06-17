@@ -87,6 +87,8 @@ class Security extends Controller
     $this->render();
   }
 
+
+
   public function creerUtlisateur()
   {
     $profil = "joueur";
@@ -150,6 +152,7 @@ class Security extends Controller
               } else {
                 $avatar = "placeholder78787XSDD.jpg";
               }
+
               $compteUser = new User();
               $compteUser->setLogin($pseudo);
               $compteUser->setPwd($password1);
@@ -159,7 +162,7 @@ class Security extends Controller
 
               $result = $this->manager->add($compteUser);
               if ($result) {
-                $this->data['err_login'] = "Création effectuée";
+                $this->data['success_login'] = "Création effectuée";
                 $this->loadViewInscrip();
               }
             } else {
